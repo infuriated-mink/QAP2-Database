@@ -9,6 +9,7 @@ CREATE TABLE Provinces (
 CREATE TABLE Cities (
     City_ID SERIAL NOT NULL,
     City_Name VARCHAR(255) NOT NULL,
-    Province_ID INT REFERENCES Provinces(Province_ID) ON DELETE CASCADE,
-    PRIMARY KEY (City_ID)
+    Province_ID INT NOT NULL,
+    PRIMARY KEY (City_ID),
+    FOREIGN KEY (Province_ID) REFERENCES Provinces(Province_ID) ON DELETE CASCADE
 );
