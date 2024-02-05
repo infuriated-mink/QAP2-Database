@@ -4,8 +4,8 @@ CREATE TABLE Location (
   street_address VARCHAR,
   unit_number VARCHAR,
   postal_code VARCHAR,
-  city_id INT REFERENCES City(city_id),
-  province_id INT REFERENCES Province(province_id)
+  city_id VARCHAR,
+  province_id VARCHAR
 );
 
 CREATE TABLE University (
